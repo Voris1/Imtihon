@@ -40,13 +40,14 @@ const AddProduct = () => {
           color: color.value,
           price: price.value,
           priceInSale: priceInSale.value,
-
-       
         }),
       }
     );
     const result = await response.json();
-    console.log(result);
+    console.log("result", result);
+    if (result?.id !== 0) {
+      window.location = "/";
+    }
   };
 
   if (!token) {
@@ -54,10 +55,11 @@ const AddProduct = () => {
   }
 
   const Created = () => {
-   window.location = '/'
+    if (result + 1) {
+      window.location = "/";
+    }
   };
 
-  
   console.log(data);
   return (
     <>

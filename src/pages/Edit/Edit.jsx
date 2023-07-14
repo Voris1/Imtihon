@@ -18,7 +18,6 @@ const Edit = (token) => {
     window.location = "/login";
   }
 
-
   const handleSubmit = async (e) => {
     let {
       name,
@@ -51,17 +50,15 @@ const Edit = (token) => {
           color: color.value,
           price: price.value,
           priceInSale: priceInSale.value,
-
-       
         }),
       }
     );
     const result = await response.json();
     console.log(result);
-    console.log(response);
+    if (result?.id !== 0) {
+      window.location = "/";
+    }
   };
-
-
 
   return (
     <>

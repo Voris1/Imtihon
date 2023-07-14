@@ -64,7 +64,6 @@ const Home = (props) => {
       });
   };
 
-  console.log(product);
 
   return (
     <>
